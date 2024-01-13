@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Materia {
 
         private String nombre;
-        private final int CUPO = 15;
+        public static final int CUPO = 15;
 
-        ArrayList<Alumno> alumnosInscritos = new ArrayList<>();
+       private ArrayList<Alumno> alumnosInscritos = new ArrayList<>();
 
     public String getNombre() {
         return nombre;
@@ -23,6 +23,12 @@ public class Materia {
 
     public void setAlumnosInscritos(ArrayList<Alumno> alumnosInscritos) {
         this.alumnosInscritos = alumnosInscritos;
+    }
+
+
+        public void agregarAlumno (Alumno alumno){
+
+        getAlumnosInscritos().add(alumno);
     }
 
 
